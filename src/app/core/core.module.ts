@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { CoreRoutingModule } from './core-routing.module';
-
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HttpService } from './services/http.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    CoreRoutingModule
-  ]
+  declarations: [NavbarComponent, FooterComponent],
+  providers: [HttpService],
+  imports: [CommonModule, HttpClientModule],
+  exports: [FooterComponent, NavbarComponent],
 })
-export class CoreModule { }
+export class CoreModule {}

@@ -1,0 +1,20 @@
+<div class="wrapper">
+    <h3>{{title}}</h3>
+    <hr style="height: 1px; opacity: .2;">
+    <p-table [value]="data" responsiveLayout="scroll">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Marcas que ofrecemos</th>
+                <th>Laboratorio</th>
+                <th>Precio (sin cobertura medica)</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr>
+                <td>{{product.brand}}</td>
+                <td>{{product.laboratory}}</td>
+                <td>{{product.price}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

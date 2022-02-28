@@ -1,0 +1,44 @@
+.hero {
+  height: 460px;
+  background: linear-gradient(
+    205.22deg,
+    #ffa15c -2.89%,
+    rgba(255, 91, 146, 0.95) 59.15%,
+    #771cfe 125.51%
+  );
+}
+.nurse {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  .title {
+    font-size: 4em;
+    font-weight: 500;
+    position: absolute;
+    left: 8%;
+    bottom: 80px;
+    color: white;
+    letter-spacing: 2px;
+    line-height: 1.3;
+  }
+  img {
+    position: absolute;
+    right: 10%;
+    bottom: 0px;
+  }
+  .circle {
+    position: absolute;
+    width: 900px;
+    height: 850px;
+    left: 0px;
+    top: 0px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 21.81%,
+      rgba(255, 255, 255, 0.2) 84.31%
+    );
+  }
+}

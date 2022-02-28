@@ -1,14 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { SharedRoutingModule } from './shared-routing.module';
-
+import { HeroComponent } from './components/hero/hero.component';
+import { TableComponent } from './components/table/table.component';
+import { PrimengModule } from './primeng/primeng.module';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    SharedRoutingModule
-  ]
+  declarations: [HeroComponent, TableComponent],
+  imports: [CommonModule, PrimengModule],
+  exports: [HeroComponent, TableComponent],
 })
-export class SharedModule { }
+export class SharedModule {}
