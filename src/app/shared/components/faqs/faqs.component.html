@@ -1,6 +1,6 @@
 <div class="wrapper">
     <h1 class="title">{{title}}</h1>
-    <p-accordion [multiple]="true" styleClass="prime-slider-override">
+    <p-accordion [multiple]="false" styleClass="prime-slider-override">
         <p-accordionTab header='{{tab.title}}' *ngFor="let tab of faqs.data" [hidden]="!tab.enabled">
             <p class="description">{{tab.description}}</p>
         </p-accordionTab>
