@@ -20,6 +20,9 @@ export class HomeComponent implements OnInit {
   patches!: medication[];
   rings!: medication[];
   medication!: medications;
+  faqs!: faqs;
+  display: boolean = false;
+
   constructor(private http: HttpService) {}
 
   ngOnInit(): void {
@@ -37,9 +40,11 @@ export class HomeComponent implements OnInit {
   }
 
   getFaqs(): void {
-    this.http.get(this.faqs_url).subscribe((res: any) => {
-      let data: faqs[] = res.data;
-      console.log(data);
+    this.http.get<faqs>(this.faqs_url).subscribe((res) => {
+      this.faqs = res;
     });
+  }
+  showDialog() {
+    this.display = true;
   }
 }

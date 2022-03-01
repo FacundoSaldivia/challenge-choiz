@@ -10,5 +10,6 @@ import { HttpService } from 'src/app/core/services/http.service';
   declarations: [HomeComponent],
   imports: [CommonModule, PublicRoutingModule, SharedModule],
   providers: [HttpService],
+  exports: [SharedModule],
 })
 export class PublicModule {}

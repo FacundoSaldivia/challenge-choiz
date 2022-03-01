@@ -1,4 +1,27 @@
 <app-hero></app-hero>
-<app-table [data]="pills" [title]="'Pastillas'"></app-table>
-<app-table [data]="patches" [title]="'Anillos'"></app-table>
-<app-table [data]="rings" [title]="'Parches'"></app-table>
+<section class="first-section">
+    <div class="text">
+        <h2>Las mejores expertas en ginecología del país están a tu disposición para conversar sin que tengas que salir
+            de
+            tu casa.</h2>
+    </div>
+    <div class="button">
+        <button (click)="showDialog()" pButton pRipple type="button" label="Agendar una consulta"
+            class="p-button-raised"
+            [style]="{'border-radius':'5px', 'padding':'12px 50px', 'background':'#B700DB','border':'none'}"></button>
+    </div>
+</section>
+<section class="medication-list">
+    <div class="title">
+        <h2>Lista de medicamentos</h2>
+    </div>
+    <app-table [data]="pills" [title]="'Pastillas'"></app-table>
+    <app-table [data]="patches" [title]="'Anillos'"></app-table>
+    <app-table [data]="rings" [title]="'Parches'"></app-table>
+</section>
+<app-faqs *ngIf="faqs" [title]="'Preguntas frecuentes'" [faqs]="faqs"></app-faqs>
+<p-dialog styleClass="override" [modal]="true"
+    [style]="{border:'10px solid #fee5f8', 'border-radius':'50px','background-color':'#fee5f8!', 'width': '100vw', 'max-width':'1200px'}"
+    [contentStyle]="{'background':'#fee5f8', 'border-radius':'20px'}" [(visible)]="display" [showHeader]="true">
+    <app-modal></app-modal>
+</p-dialog>

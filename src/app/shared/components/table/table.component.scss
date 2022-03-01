@@ -1,4 +1,22 @@
+@import "../../styles/shared-styles.scss";
 .wrapper {
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
+  .title {
+    color: $title-color;
+    font-family: $title-font;
+    margin-left: 5px;
+  }
+}
+#Table td {
+  white-space: nowrap !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 250px;
+  font-size: 12px;
+}
+@media screen and (max-width: 950px) {
+  .wrapper {
+    margin: 0 20px;
+  }
 }
