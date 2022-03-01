@@ -35,6 +35,9 @@
     font-family: $title-font;
   }
 }
+.faqs {
+  margin-bottom: 80px;
+}
 :host {
   ::ng-deep .override {
     .p-dialog-header {

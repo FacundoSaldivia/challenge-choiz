@@ -1,7 +1,7 @@
 @import "../../styles/shared-styles.scss";
 .wrapper {
   max-width: 900px;
-  margin: auto;
+  margin: 80px auto;
   .title {
     color: $title-color;
     font-family: $title-font;
@@ -17,6 +17,6 @@
 }
 @media screen and (max-width: 950px) {
   .wrapper {
-    margin: 0 20px;
+    margin: 50px 20px;
   }
 }

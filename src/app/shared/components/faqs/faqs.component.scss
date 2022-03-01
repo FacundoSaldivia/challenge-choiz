@@ -2,11 +2,18 @@
 .wrapper {
   max-width: 800px;
   margin: 0 auto;
+
   .title {
     color: $title-color;
     font-family: $title-font;
     font-size: 36px;
     text-align: center;
+  }
+  .description {
+    color: $title-color;
+    family-font: $text-font;
+    font-weight: 500;
+    opacity: 0.8;
   }
 }
 
@@ -21,6 +28,8 @@
       background: transparent !important;
       border: none;
       border-bottom: 1px solid #d6d6d6;
+      color: $title-color;
+      family-font: $text-font;
     }
     .p-accordion-header-link:hover {
       background: transparent;
