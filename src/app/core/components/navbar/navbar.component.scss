@@ -9,7 +9,10 @@ $text-white: #ffffff;
 }
 
 .nav.hide-nav {
-  display: none; /* You can play on opacity for nice transitions*/
+  display: none;
+}
+.logo-mobile {
+  display: none;
 }
 .navbar {
   width: 78vw;
@@ -162,5 +165,14 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   }
   .wrapper {
     display: none;
+  }
+  .navbar-mobile {
+    .logo-mobile {
+      display: block;
+    }
+    .logo {
+      position: fixed;
+      margin-left: 20px;
+    }
   }
 }

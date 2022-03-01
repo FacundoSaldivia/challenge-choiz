@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/core/services/http.service';
-import { dataInfo } from 'src/app/shared/models/dataInfo';
+
 import { faqs } from 'src/app/shared/models/faqs';
 import { medication } from 'src/app/shared/models/medication';
 
@@ -31,12 +31,13 @@ export class HomeComponent implements OnInit {
   }
 
   getMedication(): void {
-    this.http.get(this.medication_url).subscribe((res: any) => {
-      let data: medications = res.data;
-      this.pills = data.pills;
-      this.rings = data.rings;
-      this.patches = data.patches;
-    });
+    this.http
+      .get<medications>(this.medication_url)
+      .subscribe((res: medications) => {
+        this.pills = res.data.pills;
+        this.rings = res.data.rings;
+        this.patches = res.data.patches;
+      });
   }
 
   getFaqs(): void {
