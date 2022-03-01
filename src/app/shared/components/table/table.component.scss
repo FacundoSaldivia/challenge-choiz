@@ -1,0 +1,32 @@
+@import "../../styles/shared-styles.scss";
+.wrapper {
+  max-width: 900px;
+  margin: 80px auto;
+  .title {
+    color: $title-color;
+    font-family: $title-font;
+    margin-left: 5px;
+  }
+}
+#Table td {
+  white-space: nowrap !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 250px;
+  font-size: 12px;
+}
+.titles {
+  color: $title-color !important;
+}
+.items {
+  color: $title-color !important;
+  opacity: 0.6 !important;
+  font-family: $title-font !important;
+  font-weight: 600 !important;
+  font-size: 1em !important;
+}
+@media screen and (max-width: 950px) {
+  .wrapper {
+    margin: 50px 20px;
+  }
+}

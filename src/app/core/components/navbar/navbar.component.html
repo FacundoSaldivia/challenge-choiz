@@ -1,0 +1,40 @@
+<div class="wrapper" (scroll)="onScroll($event)">
+    <div class="navbar" [class.hide-nav]="hideNav">
+        <div class="logo">
+            <img src="../../../../assets/img/logo.svg" alt="">
+        </div>
+        <div class="links">
+            <ul>
+                <li>Tratamientos</li>
+                <li>Consultas online</li>
+                <li>Quienes somos</li>
+                <li>Preguntas frecuentes</li>
+                <li>Contacto</li>
+                <li><button>¿Tenes dudas?</button></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="navbar-mobile">
+    <div class="logo logo-mobile">
+        <img src="../../../../assets/img/logo.svg" alt="">
+    </div>
+    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner diagonal part-1"></div>
+        <div class="spinner horizontal"></div>
+        <div class="spinner diagonal part-2"></div>
+    </label>
+    <div id="sidebarMenu">
+        <div class="main-content-wrapper">
+            <a href="">Tratamientos</a>
+            <a href="">Consultas online</a>
+            <a href="">Quienes somos</a>
+            <a href="">Preguntas frecuentes</a>
+            <a href="">Contacto</a>
+            <a href="">¿Tenes dudas?</a>
+        </div>
+    </div>
+</div>
